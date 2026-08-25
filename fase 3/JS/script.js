@@ -1,3 +1,4 @@
+// Autoria de: Angelo Antonio da Silva
 const dino = document.querySelector('.dino');
 const obstacle = document.querySelector('.obstacle');
 

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+
+    <title>Dino Night Run</title>
+  </head>
+
+  <body>
+    <main class="game">
+      <header class="top-bar">
+        <div class="title">DINO<span>_RUN</span></div>
+
+        <div class="score-board">SCORE: <span id="score">0000</span></div>
+      </header>
+
+      <section class="game-board">
+        <!-- Lua -->
+        <div class="moon"></div>
+
+        <!-- Estrelas -->
+        <div class="stars"></div>
+
+        <!-- Prédios -->
+        <div class="city city-back"></div>
+        <div class="city city-front"></div>
+
+        <!-- Dinossauro -->
+        <div class="dino">
+          <div class="eye"></div>
+          <div class="arm"></div>
+          <div class="leg leg-left"></div>
+          <div class="leg leg-right"></div>
+        </div>
+
+        <!-- Obstáculo -->
+        <div class="obstacle">
+          <div class="obstacle-light"></div>
+        </div>
+
+        <!-- Chão -->
+        <div class="ground"></div>
+
+        <!-- Tela de Game Over -->
+        <div class="game-over">
+          <h1>GAME OVER</h1>
+
+          <p>O DINO FOI DE BASE</p>
+
+          <button id="restart">JOGAR NOVAMENTE</button>
+        </div>
+      </section>
+
+      <p class="controls">[ ESPAÇO ] PARA PULAR</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" defer></script>
+
+    <title>Frog Runner</title>
+  </head>
+
+  <body>
+    <main class="game">
+      <header class="game-header">
+        <div class="logo">FROG <span>RUNNER</span></div>
+
+        <div class="score-box">
+          SCORE:
+          <span id="score">0000</span>
+        </div>
+      </header>
+
+      <section class="game-board">
+        <div class="moon"></div>
+
+        <div class="fireflies"></div>
+
+        <div class="trees trees-back"></div>
+
+        <div class="trees trees-front"></div>
+
+        <div class="frog">
+          <div class="frog-eye eye-left">
+            <div class="pupil"></div>
+          </div>
+
+          <div class="frog-eye eye-right">
+            <div class="pupil"></div>
+          </div>
+
+          <div class="frog-mouth"></div>
+
+          <div class="frog-leg leg-left"></div>
+
+          <div class="frog-leg leg-right"></div>
+        </div>
+
+        <div class="obstacle">
+          <div class="log"></div>
+        </div>
+
+        <div class="ground"></div>
+
+        <div class="game-over">
+          <h1>GAME OVER</h1>
+
+          <p>O SAPO BATEU NO TRONCO 💀</p>
+
+          <p>
+            SCORE:
+            <span id="final-score">0000</span>
+          </p>
+
+          <button id="restart">TENTAR NOVAMENTE</button>
+        </div>
+      </section>
+
+      <p class="instructions">
+        APERTE
+        <strong>ESPAÇO</strong>
+        PARA PULAR
+      </p>
+    </main>
+  </body>
+</html>

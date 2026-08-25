@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" defer></script>
+
+    <title>Jurassic Runner</title>
+  </head>
+
+  <body>
+    <main class="game">
+      <header class="game-header">
+        <div class="game-title">    
+          JURASSIC
+          <span>RUNNER</span>
+        </div>
+
+        <div class="score-box">
+          DISTÂNCIA:
+          <span id="score">000</span>M
+        </div>
+      </header>
+
+      <section class="game-board">
+        <!-- Sol -->
+        <div class="sun"></div>
+
+        <!-- Montanhas -->
+        <div class="mountains mountains-back"></div>
+
+        <div class="mountains mountains-front"></div>
+
+        <div class="forest forest-back"></div>
+
+        <div class="forest forest-front"></div>
+
+        <div class="dino">
+          <div class="head">
+            <div class="eye"></div>
+          </div>
+
+          <div class="body"></div>
+
+          <div class="tail"></div>
+
+          <div class="leg leg-one"></div>
+
+          <div class="leg leg-two"></div>
+        </div>
+
+        <div class="obstacle">
+          <div class="rock"></div>
+        </div>
+
+        <div class="ground"></div>
+
+        <div class="game-over">
+          <h1>FIM DA EXPEDIÇÃO</h1>
+
+          <p>
+            DISTÂNCIA FINAL:
+            <span id="final-score">000</span>M
+          </p>
+
+          <button id="restart">TENTAR NOVAMENTE</button>
+        </div>
+      </section>
+
+      <p class="instructions">
+        PRESSIONE
+        <strong>ESPAÇO</strong>
+        PARA PULAR
+      </p>
+    </main>
+  </body>
+</html>

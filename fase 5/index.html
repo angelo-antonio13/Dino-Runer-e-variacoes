@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+
+    <title>ROBO RUN</title>
+  </head>
+
+  <body>
+    <main class="game">
+      <header class="game-header">
+        <div class="logo">ROBO<span>RUN</span></div>
+
+        <div class="score-box">
+          ENERGIA:
+          <span id="score">0000</span>
+        </div>
+      </header>
+
+      <section class="game-board">
+        
+        <div class="stars"></div>
+
+        <div class="factory factory-back"></div>
+        <div class="factory factory-front"></div>
+
+        <div class="robot">
+          <div class="antenna"></div>
+
+          <div class="robot-head">
+            <div class="robot-eye eye-left"></div>
+            <div class="robot-eye eye-right"></div>
+          </div>
+
+          <div class="robot-body">
+            <div class="robot-core"></div>
+          </div>
+
+          <div class="robot-arm arm-left"></div>
+          <div class="robot-arm arm-right"></div>
+
+          <div class="robot-leg leg-left"></div>
+          <div class="robot-leg leg-right"></div>
+        </div>
+
+        <div class="obstacle">
+          <div class="laser"></div>
+        </div>
+
+        <div class="ground"></div>
+
+        <div class="game-over">
+          <h1>SYSTEM ERROR</h1>
+
+          <p>O ROBÔ FOI DE BASE 🤖💥</p>
+
+          <p>
+            ENERGIA COLETADA:
+            <span id="final-score">0000</span>
+          </p>
+
+          <button id="restart">REINICIAR SISTEMA</button>
+        </div>
+      </section>
+
+      <p class="instructions">
+        PRESSIONE
+        <strong>ESPAÇO</strong>
+        PARA PULAR
+      </p>
+    </main>
+  </body>
+</html>

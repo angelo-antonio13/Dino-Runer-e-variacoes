@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(circle at top, #f7e8b5 0%, transparent 35%), #d9c9a1;
+
+  font-family: "Press Start 2P", monospace;
+
+  overflow: hidden;
+}
+
+.game {
+  width: min(1100px, 95%);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  color: #403c35;
+
+  font-size: 14px;
+}
+
+.logo span {
+  color: #d35400;
+}
+
+.score {
+  font-size: 12px;
+}
+
+.game-board {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+
+  border: 6px solid #403c35;
+  border-radius: 8px;
+
+  background: linear-gradient(to bottom, #f5dfaa 0%, #f7e8c4 65%, #e7cf96 100%);
+
+  box-shadow:
+    10px 10px 0 #403c35,
+    inset 0 0 80px rgba(80, 60, 30, 0.08);
+}
+
+/* SOL */
+
+.sun {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  right: 12%;
+  top: 60px;
+
+  border-radius: 50%;
+
+  background: #e67e22;
+
+  box-shadow: 0 0 0 10px rgba(230, 126, 34, 0.15);
+}
+
+
+.cloud {
+  position: absolute;
+
+  width: 110px;
+  height: 28px;
+
+  background: #fff4d6;
+
+  opacity: 0.8;
+
+  border-radius: 50px;
+
+  animation: cloud-move linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  background: inherit;
+
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 45px;
+  height: 45px;
+
+  left: 15px;
+  bottom: 10px;
+}
+
+.cloud::after {
+  width: 60px;
+  height: 60px;
+
+  right: 10px;
+  bottom: 5px;
+}
+
+.cloud-1 {
+  top: 100px;
+
+  animation-duration: 18s;
+}
+
+.cloud-2 {
+  top: 180px;
+
+  animation-duration: 25s;
+
+  animation-delay: -8s;
+
+  transform: scale(0.7);
+}
+
+@keyframes cloud-move {
+  from {
+    right: -200px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+.mountains {
+  position: absolute;
+
+  width: 100%;
+  height: 150px;
+
+  bottom: 35px;
+
+  opacity: 0.25;
+
+  background: linear-gradient(
+    135deg,
+    transparent 40%,
+    #8b7653 40%,
+    #8b7653 60%,
+    transparent 60%
+  );
+
+  background-size: 180px 150px;
+}
+
+.ground {
+  position: absolute;
+
+  width: 100%;
+  height: 45px;
+
+  bottom: 0;
+
+  border-top: 6px solid #403c35;
+
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 30px,
+    #403c35 30px,
+    #403c35 50px
+  );
+
+  background-size: 300px 100%;
+
+  animation: ground-move 0.8s linear infinite;
+}
+
+@keyframes ground-move {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: -300px;
+  }
+}
+
+.dino {
+  position: absolute;
+
+  width: 55px;
+  height: 75px;
+
+  left: 100px;
+  bottom: 45px;
+
+  background: #403c35;
+
+  border-radius: 8px 8px 4px 4px;
+
+  z-index: 5;
+}
+
+.dino::before {
+  content: "";
+
+  position: absolute;
+
+  width: 65px;
+  height: 42px;
+
+  top: -18px;
+  left: -5px;
+
+  background: #403c35;
+
+  border-radius: 8px 10px 3px 3px;
+}
+
+.dino::after {
+  content: "";
+
+  position: absolute;
+
+  width: 45px;
+  height: 25px;
+
+  left: -38px;
+  bottom: 12px;
+
+  background: #403c35;
+
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+.dino-eye {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  background: #f5dfaa;
+
+  border-radius: 50%;
+
+  top: -8px;
+  right: 8px;
+
+  z-index: 2;
+}
+
+.dino-arm {
+  position: absolute;
+
+  width: 12px;
+  height: 30px;
+
+  right: -8px;
+  top: 20px;
+
+  background: #403c35;
+
+  border-radius: 0 0 6px 6px;
+
+  z-index: 2;
+}
+
+.dino-leg {
+  position: absolute;
+
+  width: 13px;
+  height: 28px;
+
+  bottom: -15px;
+
+  background: #403c35;
+
+  border-radius: 0 0 4px 4px;
+}
+
+.leg-1 {
+  left: 10px;
+}
+
+.leg-2 {
+  right: 10px;
+}
+
+.jump {
+  animation: jump 650ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes jump {
+  0% {
+    bottom: 45px;
+  }
+
+  45% {
+    bottom: 230px;
+  }
+
+  55% {
+    bottom: 230px;
+  }
+
+  100% {
+    bottom: 45px;
+  }
+}
+
+.cactus {
+  position: absolute;
+
+  width: 35px;
+  height: 85px;
+
+  right: -100px;
+  bottom: 45px;
+
+  background: #356a42;
+
+  border-radius: 8px 8px 2px 2px;
+
+  z-index: 4;
+
+  animation: cactus-move 2s linear infinite;
+}
+
+.cactus::before {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+  height: 35px;
+
+  left: -13px;
+  top: 30px;
+
+  background: #356a42;
+
+  border-radius: 8px 0 0 8px;
+}
+
+.cactus::after {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+  height: 40px;
+
+  right: -13px;
+  top: 15px;
+
+  background: #356a42;
+
+  border-radius: 0 8px 8px 0;
+}
+
+@keyframes cactus-move {
+  from {
+    right: -100px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+.game-over {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: none;
+
+  text-align: center;
+
+  color: #403c35;
+
+  z-index: 20;
+}
+
+.game-over h1 {
+  font-size: 30px;
+
+  margin-bottom: 25px;
+}
+
+.game-over p {
+  font-size: 10px;
+
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+}
+
+#restart {
+  border: 4px solid #403c35;
+
+  padding: 15px 20px;
+
+  background: #f5dfaa;
+
+  color: #403c35;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  box-shadow: 5px 5px 0 #403c35;
+
+  transition: 0.1s;
+}
+
+#restart:active {
+  transform: translate(4px, 4px);
+
+  box-shadow: 1px 1px 0 #403c35;
+}
+
+.instructions {
+  text-align: center;
+
+  margin-top: 35px;
+
+  color: #5c554a;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+.game-over.active {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .game-board {
+    height: 400px;
+  }
+
+  .dino {
+    left: 60px;
+
+    transform: scale(0.8);
+    transform-origin: bottom left;
+  }
+
+  .game-header {
+    font-size: 10px;
+  }
+
+  .logo,
+  .score {
+    font-size: 9px;
+  }
+}

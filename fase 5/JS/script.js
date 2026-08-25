@@ -1,3 +1,4 @@
+// Autoria de: Angelo Antonio da Silva 
 const robot =
     document.querySelector('.robot');
 

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Game - Fases</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            color: #222;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitulo {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .fases {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .fase {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+
+            text-decoration: none;
+            color: #222;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition: 0.2s;
+        }
+
+        .fase:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .numero {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .texto {
+            color: #777;
+        }
+
+        /* PAGINAÇÃO */
+
+        .paginacao {
+            margin-top: 35px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .paginacao a {
+            text-decoration: none;
+            color: #222;
+
+            min-width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+            background: white;
+
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+            transition: 0.2s;
+        }
+
+        .paginacao a:hover {
+            background: #222;
+            color: white;
+        }
+
+        .paginacao .ativa {
+            background: #222;
+            color: white;
+        }
+
+        .voltar {
+            padding: 0 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            .fases {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>🦖 Dino Game</h1>
+
+        <p class="subtitulo">
+            Escolha uma fase para jogar
+        </p>
+
+        <section class="fases">
+
+            <a href="../fase 1/index.html" class="fase">
+                <div class="numero">Fase 1</div>
+                <div class="texto">Começar o jogo</div>
+            </a>
+
+            <a href="../fase 2/index.html" class="fase">
+                <div class="numero">Fase 2</div>
+                <div class="texto">Começar o jogo</div>
+            </a>
+
+            <a href="../fase 3/index.html" class="fase">
+                <div class="numero">Fase 3</div>
+                <div class="texto">Começar o jogo</div>
+            </a>
+
+            <a href="../fase 4/index.html" class="fase">
+                <div class="numero">Fase 4</div>
+                <div class="texto">Começar o jogo</div>
+            </a>
+
+            <a href="../fase 5/index.html" class="fase">
+                <div class="numero">Fase 5</div>
+                <div class="texto">Começar o jogo</div>
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
